@@ -13,6 +13,7 @@ define("OSWUI", 1);
  * there is no extra stuff being loaded that aint needed.
  **/
 include "./app/engine/inc/init.php";
+include './app/engine/inc/gridconfig.php';
 /**
  * This section will collect the data of the page and any other values and then
  * load the page, homepage or 404 page then it will store the other values in an 
@@ -31,11 +32,11 @@ if($urlPage === '')
     $page  = new Page(array('page_name' => 'home'));
     $page_name = $page->getPageName();
     $page_file = $page->getPageFile();
-    $catagory = $page->getCatagory();
-    $title_name = $page->getTitleName();
+    $catagory = $page->getPageCatagory();
+    $title_name = $page->getPageTitle();
     $page_metta = $page->getPageMetta();
     $is_page_active = $page->getIsPageActive();
-    $needs_to_be_logged_in = $page->getNeedsToBeLoggedIn();
+    //$needs_to_be_logged_in = $page->getNeedsToBeLoggedIn();
     $level= $page->getLevel();
     //$records = $setPage[0];
     include_once DOC_ROOT .'/app/views/pages/'.$catagory.'/'.$page_file;
@@ -50,11 +51,11 @@ else if($pagecount === 1)
     $page  = new Page(array('page_name' => $urlPage));
     $page_name = $page->getPageName();
     $page_file = $page->getPageFile();
-    $catagory = $page->getCatagory();
-    $title_name = $page->getTitleName();
+    $catagory = $page->getPageCatagory();
+    $title_name = $page->getPageTitle();
     $page_metta = $page->getPageMetta();
     $is_page_active = $page->getIsPageActive();
-    $needs_to_be_logged_in = $page->getNeedsToBeLoggedIn();
+    //$needs_to_be_logged_in = $page->getNeedsToBeLoggedIn();
     $level= $page->getLevel();
     //$records = $setPage[0];
     /*
@@ -81,11 +82,11 @@ else if ($pagecount !== 1)
     $page  = new Page(array('page_name' => '404'));
     $page_name = $page->getPageName();
     $page_file = $page->getPageFile();
-    $catagory = $page->getCatagory();
+    $catagory = $page->getPageCatagory();
     $page_metta = $page->getPageMetta();
-    $title_name = $page->getTitleName();
+    $title_name = $page->getPageTitle();
     $is_page_active = $page->getIsPageActive();
-    $needs_to_be_logged_in = $page->getNeedsToBeLoggedIn();
+    //$needs_to_be_logged_in = $page->getNeedsToBeLoggedIn();
     $level= $page->getLevel();
     //$records = $setPage[0];
     include_once DOC_ROOT .'/app/views/pages/'.$page_file;

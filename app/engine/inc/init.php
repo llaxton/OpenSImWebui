@@ -18,6 +18,7 @@ if (!defined("OSWUI"))
  * the config file maybe updated as time goes on so then there will be other configs in it
  */
 include dirname(__FILE__) . '/config.php';
+include dirname(__FILE__) . '/dbconfig.php';
 /*
  * enable debugging TRUE or commented out
  * This will debug the site, it is used mainly for development.
@@ -29,12 +30,12 @@ include dirname(__FILE__) . '/config.php';
  * and the topsection which will be a corosel.
  */
 $tmpl = new vTemplating(DOC_ROOT . '/app/views/');
-$tmpl->set('header', 'header.php');
-$tmpl->set('footer', 'footer.php');
-$tmpl->set('navbar', 'nav/navbar.php');
-$tmpl->set('sidebar', 'sidebar.php');
-$tmpl->set('sidebar2', 'sidebar2.php');
-$tmpl->set('topsection', 'topsection.php');
+$tmpl->set('header', 'templates/header.php');
+$tmpl->set('footer', 'templates/footer.php');
+$tmpl->set('navbar', 'templates/nav/navbar.php');
+$tmpl->set('sidebar', 'templates/sidebar.php');
+$tmpl->set('sidebar2', 'templates/sidebar2.php');
+$tmpl->set('topsection', 'templates/topsection.php');
 /*
  * This will open the session and start to keep track of the views movements and 
  * such while the site is open
@@ -46,5 +47,7 @@ vSession::open();
  * this will be iun the format conection type, dbname , dbusername , dbpassword , host
  * then it will attach the db to the site using the attach 
  */
-$database = new vDatabase('mysql','velusuni_portal','velusuni_portal','we9529xn@5','localhost');
+$database = new vDatabase($dbtype, $dbname,$dbusername,$dbpassword,$dbserver);
 vORMDatabase::attach($database);
+vORM::mapClassToTable('Page', 'webui_pages');
+vORM::mapClassToTable('Config', 'webui_config');
