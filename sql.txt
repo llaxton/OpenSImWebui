@@ -1,0 +1,93 @@
+-- phpMyAdmin SQL Dump
+-- version 4.1.14
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: May 22, 2015 at 05:56 AM
+-- Server version: 5.6.17
+-- PHP Version: 5.5.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `opensim`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `webui_config`
+--
+
+CREATE TABLE IF NOT EXISTS `webui_config` (
+  `config_id` int(255) NOT NULL AUTO_INCREMENT,
+  `config_name` varchar(255) NOT NULL,
+  `config_value` varchar(255) NOT NULL,
+  PRIMARY KEY (`config_id`),
+  UNIQUE KEY `config_name` (`config_name`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+
+--
+-- Dumping data for table `webui_config`
+--
+
+INSERT INTO `webui_config` (`config_id`, `config_name`, `config_value`) VALUES
+(1, 'grid_name', 'Velus Grid'),
+(2, 'grid_service_uri', 'http://localhost:8003/grid'),
+(3, 'grid_user_service_uri', 'http://localhost:8003/griduser'),
+(4, 'user_accounts_service_uri', 'http://localhost:8003/accounts'),
+(5, 'presence_service_uri', 'http://localhost:8003/presence'),
+(6, 'avatar_service_uri', 'http://localhost:8003/avatar'),
+(7, 'assets_service_uri', 'http://localhost:8003/assets'),
+(8, 'inventory_service_uri', 'http://localhost:8003/xinventory'),
+(9, 'groups_service_uri', 'http://localhost:8003/groups');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `webui_pages`
+--
+
+CREATE TABLE IF NOT EXISTS `webui_pages` (
+  `page_id` int(255) NOT NULL AUTO_INCREMENT,
+  `page_name` varchar(255) NOT NULL,
+  `page_file` varchar(255) NOT NULL,
+  `page_catagory` varchar(255) NOT NULL,
+  `page_title` varchar(255) NOT NULL,
+  `page_metta` longtext NOT NULL,
+  `is_page_active` tinyint(1) NOT NULL DEFAULT '1',
+  `level` int(3) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`page_id`),
+  UNIQUE KEY `page_name` (`page_name`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `webui_pages`
+--
+
+INSERT INTO `webui_pages` (`page_id`, `page_name`, `page_file`, `page_catagory`, `page_title`, `page_metta`, `is_page_active`, `level`) VALUES
+(1, 'home', 'home.php', 'main', 'Home Page', '', 1, 0),
+(2, 'about', 'about.php', 'main', 'About Our Grid', '', 1, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `webui_page_data`
+--
+
+CREATE TABLE IF NOT EXISTS `webui_page_data` (
+  `page_data_id` int(255) NOT NULL AUTO_INCREMENT,
+  `page_data_name` varchar(255) NOT NULL,
+  `page_data_header` varchar(255) NOT NULL,
+  `page_data_main` longtext NOT NULL,
+  PRIMARY KEY (`page_data_id`),
+  UNIQUE KEY `page_data_name` (`page_data_name`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `webui_page_data`
+--
+
+INSERT INTO `webui_page_data` (`page_data_id`, `page_data_name`, `page_data_header`, `page_data_main`) VALUES
+(1, 'home', 'Welcome user_name to grid_name', 'this is a simple test on the site to see how the system works <br/>\r\nthis will hopefully work out ok.');

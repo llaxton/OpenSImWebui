@@ -1,0 +1,14 @@
+first you need to upload all the files in to the domain folder so if you want it in domain.com/ you upload all the files into www/ if you want them in domain.com/test/ you 
+upload them into www/test/ please include the .htaccess file as this is important.
+go through the file /app/engine/inc and in file 
+in dbconfig you need to set the vars
+$dbtype = 'mysql'; // or 'postgresql' or 'sqlite'
+$dbname = 'opensim'; //  the database name or in sqlite the path
+$dbusername = 'opensim'; // the username
+$dbpassword = 'opensim'; // password
+$dbserver = 'localhost'; // the server
+
+then check the sql is in the correct format for you (i have done a mysql format only but will provide a sqlite and postgresql awell soon),
+and make sure that the tables webui_config has the correct detials (you will nbeed to change these.) and the table has some data in it for the welcome page
+i have put some sample data in to it and currently only the header has some vars in it that can be changed 
+you can only use grid_name which will give the name of the grid and also user_name which will display the users name or guest if not logged in. (currently no log in process is avilible).]

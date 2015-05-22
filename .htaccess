@@ -1,0 +1,9 @@
+Options -Indexes -MultiViews
+Options +FollowSymlinks
+
+
+FallbackResource /index.php
+
+
+## gzip plaintext being sent to the user
+##AddOutputFilterByType	DEFLATE		text/html text/plain application/javascript application/x-javascript text/css
