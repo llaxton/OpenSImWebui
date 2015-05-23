@@ -1,0 +1,79 @@
+[opensim.test] 1 error(s) beginning at vActiveRecord.php(1722) {q5STNWF6}
+
+Uncaught vNotFoundException
+---------------------------
+{doc_root}\index.php(82): vActiveRecord->__construct(Array)
+{doc_root}\app\engine\classes\vlib\vActiveRecord.php(1110): vActiveRecord->fetchResultFromUniqueKey(Array)
+{doc_root}\app\engine\classes\vlib\vActiveRecord.php(1722)
+The Page requested could not be found
+
+Context
+-------
+
+$_SERVER: <pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=36)</i>
+    'HTTP_HOST' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'opensim.test'</font> <i>(length=12)</i>
+    'HTTP_CONNECTION' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'keep-alive'</font> <i>(length=10)</i>
+    'HTTP_USER_AGENT' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'</font> <i>(length=109)</i>
+    'HTTP_ACCEPT' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'*/*'</font> <i>(length=3)</i>
+    'HTTP_DNT' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+    'HTTP_REFERER' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'http://opensim.test/'</font> <i>(length=20)</i>
+    'HTTP_ACCEPT_ENCODING' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'gzip, deflate, sdch'</font> <i>(length=19)</i>
+    'HTTP_ACCEPT_LANGUAGE' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'en-US,en;q=0.8'</font> <i>(length=14)</i>
+    'HTTP_COOKIE' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PHPSESSID=7spfcptcj73vn8l64ud4k4rb14'</font> <i>(length=36)</i>
+    'PATH' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\Skype\Phone\;C:\Perl64\bin\;'</font> <i>(length=473)</i>
+    'SystemRoot' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'C:\Windows'</font> <i>(length=10)</i>
+    'COMSPEC' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'C:\Windows\system32\cmd.exe'</font> <i>(length=27)</i>
+    'PATHEXT' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'</font> <i>(length=57)</i>
+    'WINDIR' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'C:\Windows'</font> <i>(length=10)</i>
+    'SERVER_SIGNATURE' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'&lt;address&gt;Apache/2.4.9 (Win64) OpenSSL/1.0.1g PHP/5.5.12 Server at opensim.test Port 80&lt;/address&gt;&#10;'</font> <i>(length=97)</i>
+    'SERVER_SOFTWARE' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Apache/2.4.9 (Win64) OpenSSL/1.0.1g PHP/5.5.12'</font> <i>(length=46)</i>
+    'SERVER_NAME' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'opensim.test'</font> <i>(length=12)</i>
+    'SERVER_ADDR' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'127.0.0.1'</font> <i>(length=9)</i>
+    'SERVER_PORT' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'80'</font> <i>(length=2)</i>
+    'REMOTE_ADDR' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'127.0.0.1'</font> <i>(length=9)</i>
+    'DOCUMENT_ROOT' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'C:/wamp/www/opensim.test'</font> <i>(length=24)</i>
+    'REQUEST_SCHEME' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'http'</font> <i>(length=4)</i>
+    'CONTEXT_PREFIX' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+    'CONTEXT_DOCUMENT_ROOT' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'C:/wamp/www/opensim.test'</font> <i>(length=24)</i>
+    'SERVER_ADMIN' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'webmaster@dummy-host.example.com'</font> <i>(length=32)</i>
+    'SCRIPT_FILENAME' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'C:/wamp/www/opensim.test/index.php'</font> <i>(length=34)</i>
+    'REMOTE_PORT' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'62051'</font> <i>(length=5)</i>
+    'GATEWAY_INTERFACE' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'CGI/1.1'</font> <i>(length=7)</i>
+    'SERVER_PROTOCOL' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'HTTP/1.1'</font> <i>(length=8)</i>
+    'REQUEST_METHOD' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'GET'</font> <i>(length=3)</i>
+    'QUERY_STRING' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+    'REQUEST_URI' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'/app/assets/ico/favicon.png'</font> <i>(length=27)</i>
+    'SCRIPT_NAME' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'/index.php'</font> <i>(length=10)</i>
+    'PHP_SELF' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'/index.php'</font> <i>(length=10)</i>
+    'REQUEST_TIME_FLOAT' <font color='#888a85'>=&gt;</font> <small>float</small> <font color='#f57900'>1432258065.416</font>
+    'REQUEST_TIME' <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>1432258065</font>
+</pr)
+
+$_POST: <pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+    <i><font color='#888a85'>empty</font></i>
+</pr)
+
+$_GET: <pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+    <i><font color='#888a85'>empty</font></i>
+</pr)
+
+$_FILES: <pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=0)</i>
+    <i><font color='#888a85'>empty</font></i>
+</pr)
+
+$_SESSION: <pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=3)</i>
+    'vSession::type' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'normal'</font> <i>(length=6)</i>
+    'vSession::expires' <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>1432344465</font>
+    'user_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Guest'</font> <i>(length=5)</i>
+</pr)
+
+$_COOKIE: <pre class='xdebug-var-dump' dir='ltr'>
+<b>array</b> <i>(size=1)</i>
+    'PHPSESSID' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'7spfcptcj73vn8l64ud4k4rb14'</font> <i>(length=26)</i>
+</pr)
+

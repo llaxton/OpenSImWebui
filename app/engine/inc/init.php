@@ -51,3 +51,4 @@ $database = new vDatabase($dbtype, $dbname,$dbusername,$dbpassword,$dbserver);
 vORMDatabase::attach($database);
 vORM::mapClassToTable('Page', 'webui_pages');
 vORM::mapClassToTable('Config', 'webui_config');
+vORM::mapClassToTable('PageData', 'webui_page_data');
