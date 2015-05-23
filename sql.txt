@@ -39,9 +39,9 @@ INSERT INTO `webui_config` (`config_id`, `config_name`, `config_value`) VALUES
 (4, 'user_accounts_service_uri', 'http://localhost:8003/accounts'),
 (5, 'presence_service_uri', 'http://localhost:8003/presence'),
 (6, 'avatar_service_uri', 'http://localhost:8003/avatar'),
-(7, 'assets_service_uri', 'http://localhost:8003/assets'),
+(7, 'asset_service_uri', 'http://localhost:8003/assets'),
 (8, 'inventory_service_uri', 'http://localhost:8003/xinventory'),
-(9, 'groups_service_uri', 'http://localhost:8003/groups');
+(9, 'group_service_uri', 'http://localhost:8003/groups');
 
 -- --------------------------------------------------------
 
